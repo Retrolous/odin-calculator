@@ -18,3 +18,25 @@ console.log(add(1, 2, 3));
 console.log(subtract(1, 10, 3));
 console.log(multiply(1, 10, 3));
 console.log(divide(1, 10, 3));
+
+let firstNumber;
+let operator;
+let secondNumber;
+
+function operate(firstNumber, operator, secondNumber){
+    switch(operator){
+        case "+":
+            return add(firstNumber, secondNumber);
+        case "-":
+            return subtract(firstNumber, secondNumber);
+        case "*":
+            return multiply(firstNumber, secondNumber);
+        case "/":
+            return divide(firstNumber, secondNumber);
+        default:
+            alert("Invalid operation!")
+            break;
+    }
+}
+
+console.log(operate(1, "/", 3))
