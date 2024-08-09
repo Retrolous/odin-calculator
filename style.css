@@ -1,23 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 * {
   box-sizing: border-box;
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 800;
+  font-style: normal;
 }
 
 #main-calc-body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 50dvh;
-  width: 45dvh;
+  min-height: fit-content;
   background-color: #dedfe3;
-  padding: 18px 18px;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 20%;
-  justify-content: flex-end;
-  gap: 10px;
+  border: #0c46b0 solid 1px;
 }
 
 body {
@@ -27,54 +23,109 @@ body {
 }
 
 #button-body {
-  display: flex;
-  justify-content: space-around;
-  flex: 1 0 50%;
+  flex: 1 1 70%;
+  display: grid;
+  padding: 18px 18px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   gap: 10px;
 }
 
+#backspace {
+  grid-column: 5;
+}
+
 #equals-button {
-  flex: 2 1 30%;
+  grid-row: 4 / 6;
+  grid-column: 5;
 }
 
 button {
-  flex: 1 1 auto;
+  box-sizing: border-box;
   background: rgb(187, 191, 193);
-  background: linear-gradient(
-    180deg,
-    rgba(187, 191, 193, 1) 0%,
-    rgba(175, 181, 183, 1) 100%
-  );
   border: 3px solid #7c7f80;
   border-radius: 7.5px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.05s ease;
+  padding: 8px;
+  font-size: 1.25rem;
 }
 
 button:focus-visible {
-  box-sizing: border-box;
   border: 3px solid #6d93d4;
   background: rgb(205, 208, 210);
-  background: linear-gradient(
-    180deg,
-    rgba(205, 208, 210, 1) 0%,
-    rgba(196, 200, 201, 1) 100%
-  );
 }
 
 button:active {
   background: rgb(14, 87, 218);
   border: 3px solid #0c46b0;
-  transition: background-color 0.3s ease;
-}
-
-.buffer {
-  flex: 1 1 auto;
-  visibility: hidden;
+  transition: background-color 0.05s ease;
 }
 
 #calc-screen {
-  flex: 1 1 10%;
+  flex: 1 1 30%;
   background-color: #ffffff;
   border: 1px solid #c8c9cd;
-  margin: 0 0 10%;
+  margin: 12px 12px 5%;
+  min-height: 5rem;
+}
+
+#toolbar {
+  background-color: rgb(28, 27, 27);
+  padding: 4px 0 0;
+}
+
+#top-tools {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#icon {
+  max-height: 100%;
+}
+
+h1 {
+  font-size: 1rem;
+  display: inline;
+  color: white;
+}
+
+#window-buttons button,
+#expansions button {
+  background-color: transparent;
+  border: none;
+  padding: 4px;
+  color: white;
+}
+
+#window-buttons {
+  padding-right: 8px;
+}
+
+#expansions {
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#expansions button {
+  flex: 1 1 auto;
+  height: 48px;
+  border-radius: 0;
+}
+
+#window-buttons button{
+  border-radius: 2px;
+  height: 30px;
+  text-align: center;
+  
+}
+
+#expansions button:first-child{
+  padding-left: 4px;
+}
+
+#expansions button:active, #window-buttons button:active {
+  background-color: rgb(74, 73, 73);
 }

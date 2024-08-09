@@ -1,53 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link href="style.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
     <script src="index.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main-calc-body">
-        <div id="calc-screen">
-            <p></p>
+      <div id="toolbar">
+        <div id="top-tools">
+          <img
+            src="images/Calculator_Flat_Icon_Vector.svg"
+            alt="Calculator icon"
+            height="40"
+            width="40"
+            id="icon"
+          />
+          <h1>Calculator</h1>
+          <div id="window-buttons">
+            <button>↑</button>
+            <button>-</button>
+            <button>□</button>
+            <button>X</button>       
+          </div>
         </div>
-        <div id="button-body">
-            <div class="column">
-                <button>C</button>
-                <button>7</button>
-                <button>4</button>
-                <button>1</button>
-                <button>0</button>
-            </div>
-            <div class="column">
-                <button>AC</button>
-                <button>8</button>
-                <button>5</button>
-                <button>2</button>
-                <button>.</button>
-            </div>
-            <div class="column">
-                <button class="buffer">N/A</button>
-                <button>9</button>
-                <button>6</button>
-                <button>3</button>
-                <button>+/-</button>
-            </div>
-            <div class="column">
-                <button class="buffer">N/A</button>
-                <button>/</button>
-                <button>*</button>
-                <button>-</button>
-                <button>+</button>
-            </div>
-            <div class="column">
-                <button><-</button>
-                <button>sqrt</button>
-                <button>%</button>
-                <button id="equals-button">=</button>
-            </div>
+        <div id="expansions">
+            <button>File</button>
+            <button>Edit</button>
+            <button>View</button>
+            <button>Calculator</button>
+            <button>Help</button>
         </div>
+      </div>
+      <div id="calc-screen">
+        <p></p>
+      </div>
+      <div id="button-body">
+        <button>C</button>
+        <button>AC</button>
+        <button id="backspace"><-</button>
+
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button>/</button>
+        <button>sqrt</button>
+
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button>*</button>
+        <button>%</button>
+
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>-</button>
+        <button id="equals-button">=</button>
+
+        <button>0</button>
+        <button>.</button>
+        <button>+/-</button>
+        <button>+</button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
